@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CNT-Ejercicio</title>
+</head>
+
+<body>
+
+    <script>
+    //Aquì va todo el còdigo
+    let tiempo,costo,op,jor;
+    tiempo=parseInt(prompt("Ingrese el tiempo de duracion de la llamada (minutos): "));
+    if(tiempo <= 5 ){
+        costo = tiempo * 1;
+    }
+
+    if(tiempo > 5 && tiempo <= 8){
+        costo = 5 + ((tiempo - 5 ) * 0.80);
+    }
+    
+    if(tiempo > 8 && tiempo <= 10){
+        costo = 7.4 + ((tiempo - 8 ) * 0.70);
+    }
+    
+    if(tiempo > 10 ){
+        costo = 8.8 + ((tiempo - 10 ) * 0.50);
+    }
+    
+    op=parseInt(prompt("\t En que dia se realizo la llamada?" + "\n1. Se realizo el dia domingo." + "\n2. Se realizo entre lunes y sabado." + "\nEliga una opcion (1 o 2):" ));
+    
+    if(op == 1){
+        costo = costo + (costo*0.03);
+    } else if(op ==2){
+        jor=parseInt(prompt("\tLa llamada se relizo en: " + "\n1. Jornada matutina." + "\n2. Jornada vespertina." + "\nEliga una opcion (1 o 2)."));
+        if(jor==1){
+            costo = costo + (costo*0.15);
+        } else if(jor==2){
+            costo = costo + (costo*0.10);
+        }
+    }
+    
+    alert(`El precio de su llamada es de: $ ${costo}`);
+    document.write(`El precio de su llamada es de: $ ${costo}`);
+    console.log(`El precio de su llamada es de: $ ${costo}`);
+    
+    </script>
+
+</body>
+
+</html>
