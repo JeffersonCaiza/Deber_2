@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pasante</title>
+</head>
+<body>
+<script>
+let l,m,mi,j,v,total;
+alert(`calculo de sueldo`);
+alert(`el costo de hora de trabajo es de 2,50 dolares`);
+l=parseInt(prompt("Ingrese las horas que trabajo el lunes maximo hasta 8 horas"));
+m=parseInt(prompt("Ingrese las horas que trabajo el martes maximo hasta 8 horas"));
+mi=parseInt(prompt("Ingrese las horas que trabajo el miercoles maximo hasta 8 horas"));
+j=parseInt(prompt("Ingrese las horas que trabajo el jueves maximo hasta 8 horas"));
+v=parseInt(prompt("Ingrese las horas que trabajo el viernes maximo hasta 8 horas"));
+if ((l+m+mi+j+v)==40){
+    alert(`el total de horas trabajadas es de ${(l+m+mi+j+v)} horas`);
+    alert(`el sueldo a la semana es de ${100} dolares`);
+    }
+else if ((l+m+mi+j+v)<40){
+    total=(l+m+mi+j+v)*2.5;
+    alert(`el total de horas trabajadas es de ${(l+m+mi+j+v)} horas`);
+    alert(`el sueldo a la semana es de ${total} dolares`);
+    }
+
+</script>
+</body>
+</body>
+</html>
